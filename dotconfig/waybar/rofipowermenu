@@ -1,0 +1,15 @@
+#!/bin/sh
+ 
+# Script based off of Eric Murphy's config https://www.youtube.com/watch?v=v8w1i3wAKiw
+# Power menu script using rofi
+
+CHOSEN=$(printf "󰒲 Suspend\n Reboot\n󰐥 Shutdown\n󰗽 Log Out\n Lock Screen" | rofi -dmenu -i -p "" -theme-str '@import "rofipowerconfig.rasi"')
+
+case "$CHOSEN" in
+	"󰒲 Suspend") systemctl suspend ;;
+	" Reboot") reboot ;;
+	"󰐥 Shutdown") poweroff ;;
+	"󰗽 Log Out") hyprctl dispatch exit ;;
+	" Lock Screen") hyprlock ;;
+	*) exit 1 ;;
+esac

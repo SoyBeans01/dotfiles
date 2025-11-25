@@ -1,0 +1,80 @@
+// inspired by https://github.com/ericmurphyxyz (check commits for rofi)
+configuration {
+  drun-display-format: "{name}";
+  font: "FiraCode Nerd Font Mono 16";
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #11111190;
+  bg-alt: #9c575790;
+
+  fg: #DDDDDD;
+  fg-alt: #42424290;
+
+  window-border-color: #e0e6ff;
+  
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 15%;
+  border-radius: 8px;
+  border: 2px;
+  border-color: @window-border-color;
+}
+
+element {
+  padding: 12;
+  text-color: @fg-alt;
+}
+
+element selected {
+  background-color: #0A0A0A90;
+  text-color: @fg;
+}
+
+element-text {
+  highlight: bold italic;
+  padding: 12 0 12 0;
+  background-color: transparent;
+  text-color: #FFFFFF;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [entry];
+}
+
+listview {
+  padding: 0 0;
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
