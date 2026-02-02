@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#DEPRECIATED (BROKEN FROM UPDATE!)
+
 WALLPAPER_DIR="/usr/share/hypr/mywallpapers/"
 CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 

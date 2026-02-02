@@ -16,6 +16,11 @@ return {
 				-- Python
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
+        -- Php
+        null_ls.builtins.diagnostics.phpcs,
+        null_ls.builtins.formatting.phpcbf,
+        --C
+        --null_ls.builtins.diagnostics.clang,
 
 				null_ls.builtins.completion.spell,
 			},
